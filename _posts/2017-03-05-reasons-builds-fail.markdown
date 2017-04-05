@@ -33,7 +33,7 @@ They got more than a few.
 * Time out. The build hadn’t written to `stdout` in a while, because `stdout` was being buffered. [[12]](#footnote-12)
 * The IAM permissions clean up project. [[14]](#footnote-14)
 * TravisCI is down.
-* TravisCI changed the default version of XXXXX. [[15]](#footnote-15)
+* The `$TERM` environment variable suddenly dissapeared, and the PostgreSQL cli hangs without it. [[15]](#footnote-15)
 * That thing, where you’re changing your .travis.yml, and it takes you 5-10 commits to get a passing build.
 * [Left-Pad](https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/).
 * You build PRs and commits to master, but they have different config files. [[16]](#footnote-16)
@@ -69,7 +69,12 @@ def double(val):
 0. <a name="footnote-12"></a> So... we can see our changes, we just can’t build them.
 0. <a name="footnote-13"></a> [Python](https://www.google.com/search?q=python+buffered+stdout).
 0. <a name="footnote-14"></a> The AWS keys installed on the build box lost the ability to upload the build artifacts to S3. Could still perform LIST operations though, so we had that going for us.
-0. <a name="footnote-15"></a> We didn’t specify a version, even though we could have.
+0. <a name="footnote-15"></a> When running `psql -U postgres -f load-dev-db.sql` in this scenario, you get the the following output:
+```shell
+WARNING: terminal is not fully functional
+- (press RETURN)
+```
+And the process hangs waiting for user feedback. We were able to work around by redirecting the output to a file and catting it after the `psql` command completed.
 0. <a name="footnote-16"></a> The PR build worked. The build off of master, sadly, did not.
 0. <a name="footnote-17"></a> Since Friday last week. It’s Wednesday.
 0. <a name="footnote-18"></a> We can’t tell why this build failed.
