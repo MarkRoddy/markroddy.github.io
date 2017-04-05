@@ -5,7 +5,7 @@ date:   2017-04-06 17:23:53 -0700
 categories: jekyll update
 ---
 
-A research lab studying software engineering reached out to me recently to take a survey on Continuous Integration tools.  One of the questions they asked was if I could name a few ways I’ve seen software builds fail.  
+Recently, I recevied a request to take a survey on Continuous Integration tools from a group studying Software Engineering. One of the questions they asked was if I could name a few ways I have seen software builds fail.
 
 They got more than a few.
 
