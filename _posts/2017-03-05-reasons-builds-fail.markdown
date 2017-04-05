@@ -54,7 +54,16 @@ This list should neither be considered comprehensive nor representative of anyon
 0. <a name="footnote-6"></a> Moving the Jenkins home directory to a separate volume with more space because the main partition was filled up. Moved the home dir to `/var/lib/jenkins-backup`. Mounted the volume at `/var/lib/jenkins`, and ran `cp /var/lib/jenkins-backup/* /var/lib/jenkins`. A few weeks later I went to delete the backup, but fat fingered the command and deleted the contents of the volume. Only lost a few weeks of history thankfully.
 0. <a name="footnote-7"></a> Multiple stellar outcomes here. A full disk? Timeouts on the changes being pulled down?
 0. <a name="footnote-8"></a> Go allows for platform specific code to be defined in separate files using a naming convention to identify the platform. There’s no requirement you provide a version of the file for platforms you aren’t running. Developer committed only an OSX file.
-0. <a name="footnote-9"></a> They commited the merge conflict TODO: link to text of commited merge conflict
+0. <a name="footnote-9"></a> They commited a merge conflict like below and pushed to master.
+```diff
+<<<<<<< HEAD
+def double(arg):
+    return arg * 2
+=======
+def double(val):
+    return val * 2
+>>>>>>> Renamed function argument
+```
 0. <a name="footnote-10"></a> There’s an upgrade in progress with a staged roll out to development, then staging, and then test. The build system wasn’t accounted for.
 0. <a name="footnote-11"></a> Because we installed it via the linux distro’s package manager.
 0. <a name="footnote-12"></a> So... we can see our changes, we just can’t build them.
