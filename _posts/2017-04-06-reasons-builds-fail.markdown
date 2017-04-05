@@ -44,6 +44,8 @@ They got more than a few.
 
 This list should neither be considered comprehensive nor representative of anyone’s experience but my own. Building software is hard, and all any of us can do is try our best. [[21]](#footnote-21) 
 
+Special thanks to [@vboykis](https://twitter.com/vboykis) and [@tdhopper](https://twitter.com/tdhopper) for their feedback on this post.
+
 
 ## Footnotes:
 0. <a name="footnote-1"></a> Three months ago someone added a test which required the redis instance in the “demo” environment the product team uses to show off new features to the execs. No one new about the dependency until the execs declared that the demos are a waste of time, and the ops team tore down the demo environment.
