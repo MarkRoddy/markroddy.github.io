@@ -34,3 +34,8 @@ exclude:
   - Gemfile.lock
   - vendor
 
+# Personal Information
+google_analytics: UA-96928788-1
+github_username: MarkRoddy
+twitter_username: digitallogic
+email: markroddy@gmail.com
