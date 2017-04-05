@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I am a data engineering consultant specializing in helping people bring data driven products to market. I have enabled clients to deliver projects that range from in-memory product recommendation algorithms to big data systems using Kafka and Hadoop which process terabytes of server logs a day. Previously, I have worked at [Etsy.com](http://www.etsy.com), the [ACASA Lab](http://www.acasa.upenn.edu/) at the University of Pennsylvania, as well as several early stage startups.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+<br><br>
+![My helpful screenshot]({{ site.url }}/assets/images/markroddy3.jpg)
