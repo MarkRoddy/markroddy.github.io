@@ -30,7 +30,7 @@ They got more than a few.
 * Our version of Ruby was updated when someone installed security updates. [[11]](#footnote-11)
 * Github is down.... but just the ssh endpoints.  [[12]](#footnote-12)
 * Time out. The build hadn’t written to`stdout` in a while, because it was stuck.
-* Time out. The build hadn’t written to `stdout` in a while, because `stdout` was being buffered. [[12]](#footnote-12)
+* Time out. The build hadn’t written to `stdout` in a while, because `stdout` was being buffered. [[13]](#footnote-13)
 * The IAM permissions clean up project. [[14]](#footnote-14)
 * TravisCI is down.
 * The `$TERM` environment variable suddenly dissapeared, and the PostgreSQL cli hangs without it. [[15]](#footnote-15)
@@ -79,7 +79,7 @@ WARNING: terminal is not fully functional
 And the process hangs waiting for user feedback. We were able to work around by redirecting the output to a file and catting it after the `psql` command completed.
 0. <a name="footnote-16"></a> The PR build worked. The build off of master, sadly, did not.
 0. <a name="footnote-17"></a> Since Friday last week. It’s Wednesday.
-0. <a name="footnote-18"></a> We can’t tell why this build failed.
-0. <a name="footnote-19"></a> No one really seems to know why.
+0. <a name="footnote-18"></a> No one really seems to know why.
+0. <a name="footnote-19"></a> So we can’t tell why this build failed.  Does that count?
 0. <a name="footnote-20"></a> It’s been known to happen on occasion.
 0. <a name="footnote-21"></a> Some of the situations described have been fictionalized to protect the innocent as well as others that did not try their best.
