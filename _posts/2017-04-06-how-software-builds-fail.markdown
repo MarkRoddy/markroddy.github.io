@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Reasons Software Builds Fail"
+title:  "How Software Builds Fail"
 date:   2017-04-06 17:23:53 -0700
 categories: jekyll update
 ---
 
 Recently, I recevied a request to take a survey on Continuous Integration tools from a group studying Software Engineering. One of the questions they asked was if I could name a few ways I have seen software builds fail.
 
-They got more than a few.
+I gave them more than a few.
 
 * Github is down.
 * The database our tests are supposed to hit went down.
