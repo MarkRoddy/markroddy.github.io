@@ -31,6 +31,13 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - CNAME
+  - Procfile
+  - README.md
+  - Vagrantfile
+  - site.yml
+  - site.retry
+  - package-lock.json
 
 # Personal Information
 google_analytics: UA-96928788-1
