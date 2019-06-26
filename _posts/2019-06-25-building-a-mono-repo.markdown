@@ -63,4 +63,4 @@ Redefine your idea of a build *is* so that you can run through everything on eve
 
 **_Cons_**: Good luck getting here. This is not just a technical decision, but a values decision that your entire team needs to buy into. It only takes one or two folks who aren't comfortable with deleting long running tests before the entire thing is off the rails.
 
-Also, as I previously mentioned, there are lots of types of software for which this just isn't an option. I'd argue that of the people who claim "we couldn't do that here", many aren't actually limited by the inherent complexity of the software they are building. They are limited by inicidental complexity they (or their predecessors) have hoisted on themselves, or worse, a failure of imaginiation.
+Also, as I previously mentioned, there are lots of types of software for which this just isn't an option. Though if first thought is that you're in this camp I'd ask yourself why? Is the inherent complexity of the software you need to build, the incidental complexity of past design decisions that you'd change if you could, or that you just don't belive it could work?  
