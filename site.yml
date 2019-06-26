@@ -1,0 +1,70 @@
+---
+
+
+- name: Personal Blog
+  hosts: "*"
+  become: true
+  vars:
+    node_version: "10"
+  handlers:
+  tasks:
+    - package:
+        name: "{{ item }}"
+      with_items:
+        - ruby-dev
+        - ruby-foreman
+        - emacs-nox
+        # Needed for Jekyll's Dependencies
+        - build-essential
+        - g++
+
+    # Jekyll doesn't work well with older Ubuntu bundler
+    - name: Bundler
+      gem:
+        name: bundler
+        state: present
+        user_install: no
+        
+    - name: Bundle Install
+      command: bundle install --path vendor/bundle
+      args:
+        chdir: /vagrant
+        creates: /vagrant/vendor/bundle
+      become: false
+      
+    # Mirror repo dir so emacs doesn't get confused
+    - name: dev directory
+      file:
+        path: "/home/vagrant/development"
+        state: directory
+        owner: "vagrant"
+        group: "vagrant"
+
+    - name: link to repo
+      file:
+        path: "/home/vagrant/development/blog"
+        state: link
+        src: /vagrant
+        owner: "vagrant"
+        group: "vagrant"
+
+    # Setup Node.js for Frontend Dependencies
+    - name: Key for the Node PPA
+      apt_key:
+        url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+        state: present
+    - name: Node PPA
+      apt_repository:
+        repo: "deb https://deb.nodesource.com/node_{{ node_version }}.x {{ ansible_distribution_release }} main"
+        state: present
+        update_cache: true
+    - name: Node Package
+      package:
+        name: "nodejs={{ node_version }}*"
+        state: present
+    - name: Install Node Dependencies
+      command: "npm install"
+      args:
+        chdir: "/home/vagrant/development/blog/"
+        creates: "/home/vagrant/development/blog/node_modules"
+      become: false

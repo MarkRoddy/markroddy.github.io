@@ -37,3 +37,10 @@ google_analytics: UA-96928788-1
 github_username: MarkRoddy
 twitter_username: digitallogic
 email: markroddy@gmail.com
+
+# Listen to all interfaces so that VirtualBox port forwarding defined
+# in our Vagrantfile will actually work. The default is to listen to
+# 127.0.0.1 which won't get forwarded externally.
+host: 0.0.0.0
+
+future: true
