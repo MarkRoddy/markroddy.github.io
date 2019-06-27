@@ -16,7 +16,7 @@ The first question to ask your self is what is the nature of the projects in you
 * Automatically do... "things" happen when changes are merged to master? Or what ever the special branch name you picked for your unnecessarily complicated git workflow.
 * Generate artifacts out of band from your release process and later have a user promote them? This can be through images such as an AMI or a Docker, more traditional OS packages like RPM's and Debs (the 90's called btw), or language specific packages (jars, wheels, gems, etc).
 * Perform an automated deployment of some set of project(s) without a human in the loop? Hopefully after after some level of automated testing has been performed, but hey this your repo. You yolo you.
-* Any of the above, but in repsonse to a dependent project being "built" (for that project's definition of build)?
+* Any of the above, but in response to a dependent project being "built" (for that project's definition of build)?
 * Or, God forbid, all of the above?
 
 I pinged Dmitriy on Twitter after his initial post and he confirmed that he needed all of the above. You have my condolences, Dmitriy.
@@ -41,7 +41,7 @@ Start with a simple bash script that understands project dependencies, looks at 
 You are frequently having to remind that one person who answers these questions with data from your Jenkins monojob that "*we build something different on each run*" so "*those numbers are basically meaningless*", and "Seriously Garry, we just talked about this last week*".
 
 #### 2. Directed A-Sickening Graph
-Give each of your projects their own Jekins job. Use the path regex option to restrict builds from triggering unless said project has been modified. Create dependencies between each of these jobs that models the Directed Acyclic Graph of your project dependencies. Setup the [dependency graph plugin](https://wiki.jenkins.io/display/JENKINS/Dependency+Graph+View+Plugin) after a small change to a `README` file unexpectedly causes every project to be rebuilt and deployed. Then react in horror as it shows you the monsterous dependnecy graph you're created. At least with a shell script no can actually see the mess.
+Give each of your projects their own Jenkins job. Use the path regex option to restrict builds from triggering unless said project has been modified. Create dependencies between each of these jobs that models the Directed Acyclic Graph of your project dependencies. Setup the [dependency graph plugin](https://wiki.jenkins.io/display/JENKINS/Dependency+Graph+View+Plugin) after a small change to a `README` file unexpectedly causes every project to be rebuilt and deployed. Then react in horror as it shows you the monstrous dependency graph you're created. At least with a shell script no can actually see the mess.
 
 
 **_Pro_**: Transparency! For better or worse you'll always know when, where, and why each build has been triggered.
@@ -63,4 +63,4 @@ Redefine your idea of a build *is* so that you can run through everything on eve
 
 **_Cons_**: Good luck getting here. This is not just a technical decision, but a values decision that your entire team needs to buy into. It only takes one or two folks who aren't comfortable with deleting long running tests before the entire thing is off the rails.
 
-Also, as I previously mentioned, there are lots of types of software for which this just isn't an option. Though if first thought is that you're in this camp I'd ask yourself why? Is the inherent complexity of the software you need to build, the incidental complexity of past design decisions that you'd change if you could, or that you just don't belive it could work?  
+Also, as I previously mentioned, there are lots of types of software for which this just isn't an option. Though if first thought is that you're in this camp I'd ask yourself why? Is the inherent complexity of the software you need to build, the incidental complexity of past design decisions that you'd change if you could, or that you just don't believe it could work?  
