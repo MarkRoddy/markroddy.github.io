@@ -8,11 +8,6 @@ Vagrant.configure("2") do |config|
   end
   config.vm.network "forwarded_port", guest: 4000, host: 4050
 
-  # Sync Authorization Files
-  config.vm.synced_folder "#{ENV['HOME']}", "/home/vagrant", type: "rsync",
-                          rsync__args: ["-r", "--include=.netrc", "--exclude=*"]
-  config.vm.synced_folder "#{ENV['HOME']}/.aws", "/home/vagrant/.aws"
-  
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--cableconnected1", "on"]
   end
