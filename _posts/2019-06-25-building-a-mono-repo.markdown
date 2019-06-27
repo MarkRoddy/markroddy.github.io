@@ -24,11 +24,7 @@ I pinged Dmitriy on Twitter after his initial post and he confirmed that he need
 
 # Ideas Informed by Experience
 
-I won't endorse any particular approach because:
-1. The "right" approach is more likely to be dictated by the nature of the software you're building than anything else, and
-1. You didn't think I was going to make this easy on you, did you?
-
-I will however run through three approaches I've used in the past and explain the pros and cons of each.
+Here are three approaches I've taken to this problem along with some pros and cons I've observed of each.
 
 #### 1. Bash Your Way Through It
 
